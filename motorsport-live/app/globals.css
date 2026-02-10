@@ -1,7 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-body {
-  @apply bg-black text-white;
+@layer base {
+  body {
+    background-color: black;
+    color: white;
+  }
 }

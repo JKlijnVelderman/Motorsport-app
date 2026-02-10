@@ -1,0 +1,16 @@
+{
+  "f1-aus-fp1-results": [
+    {
+      "position": 1,
+      "driver": "Max Verstappen",
+      "team": "Red Bull",
+      "time": "1:18.234"
+    },
+    {
+      "position": 2,
+      "driver": "Charles Leclerc",
+      "team": "Ferrari",
+      "time": "+0.112"
+    }
+  ]
+}

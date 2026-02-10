@@ -2,7 +2,6 @@
   {
     "id": "f1",
     "name": "Formula 1",
-    "logo": "/logos/f1.svg",
     "category": "Single-Seater",
     "status": "ongoing"
   },
