@@ -1,0 +1,45 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.brand span {
+  color: var(--brand-red);
+}
+
+.menu {
+  display: flex;
+  gap: 24px;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.link:hover {
+  color: var(--text-primary);
+}

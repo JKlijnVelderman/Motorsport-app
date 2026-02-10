@@ -1,0 +1,31 @@
+.hero {
+  background: linear-gradient(
+    120deg,
+    var(--brand-red),
+    var(--brand-purple)
+  );
+  border-radius: var(--radius);
+  padding: 40px;
+  color: white;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+  margin-bottom: 40px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  opacity: 0.85;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 18px;
+  opacity: 0.9;
+}

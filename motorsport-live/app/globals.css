@@ -5,4 +5,34 @@
     background-color: black;
     color: white;
   }
+  :root {
+  /* Brand */
+  --brand-red: #ff1e1e;
+  --brand-blue: #2563eb;
+  --brand-purple: #7c3aed;
+
+  /* Series */
+  --f1: #ff1801;
+  --motogp: #ffcc00;
+  --wec: #16a34a;
+
+  /* Light UI */
+  --bg-app: #f4f6fb;
+  --bg-card: #ffffff;
+  --bg-soft: #eef1f8;
+
+  /* Text */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+
+  /* UI */
+  --border: #e2e8f0;
+  --radius: 18px;
+}
+
+html, body {
+  background: linear-gradient(180deg, #f4f6fb, #e9ecf5);
+  color: var(--text-primary);
+  font-family: Inter, system-ui, sans-serif;
+}
 }

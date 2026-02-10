@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import LiveNowCard from "./LiveNowCard";
 import ScheduleCard from "./ScheduleCard";
-import SessionTimeline from "./SessionTimeline";
+import SessionTimeline from "./timeline/SessionTimeline";
 
 
 export default function DashboardClient() {
@@ -54,7 +54,8 @@ export default function DashboardClient() {
       {/*<ScheduleCard sessions={weeklySessions} />*/}
 
       {/* TIMELINE */}
-      <SessionTimeline sessions={weeklySessions} />
+      <SessionTimeline />
+      
     </>
   );
 }
