@@ -1,0 +1,16 @@
+[
+  {
+    "id": "f1",
+    "name": "Formula 1",
+    "logo": "/logos/f1.svg",
+    "category": "Single-Seater",
+    "status": "ongoing"
+  },
+  {
+    "id": "motogp",
+    "name": "MotoGP",
+    "logo": "/logos/motogp.svg",
+    "category": "Motorcycle",
+    "status": "ongoing"
+  }
+]
