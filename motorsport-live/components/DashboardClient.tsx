@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import LiveNowCard from "./LiveNowCard";
 import ScheduleCard from "./ScheduleCard";
+import SessionTimeline from "./SessionTimeline";
+
 
 export default function DashboardClient() {
   // Hooks must be inside the component function
@@ -49,7 +51,10 @@ export default function DashboardClient() {
       <LiveNowCard sessions={liveSessions} />
 
       {/* THIS WEEK */}
-      <ScheduleCard sessions={weeklySessions} />
+      {/*<ScheduleCard sessions={weeklySessions} />*/}
+
+      {/* TIMELINE */}
+      <SessionTimeline sessions={weeklySessions} />
     </>
   );
 }

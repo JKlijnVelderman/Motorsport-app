@@ -37,20 +37,42 @@ export function getLiveSessions() {
 
 // This is a helper function to get sessions that are happening this week, used for the "This Week" section on the homepage
 import { isThisWeek } from "./time";
+import { generateThisWeekSessions } from "./mockSessions";
+
+const isDev = process.env.NODE_ENV === "development";
 
 export function getThisWeeksSessions() {
-  return sessions
+  const baseSessions = [...sessions];
+
+  // 🔥 Inject mock sessions if none exist this week
+  if (
+    isDev &&
+    !baseSessions.some(s => isThisWeek(s.startTime))
+  ) {
+    baseSessions.push(...generateThisWeekSessions());
+  }
+
+  return baseSessions
     .filter(s => isThisWeek(s.startTime))
     .map(session => {
-      const event = events.find(e => e.id === session.eventId);
-      const seriesItem = series.find(s => s.id === event?.seriesId);
+      const event = events.find(e => e.id === session.eventId) ?? {
+        name: "Test Grand Prix",
+        seriesId: "f1"
+      };
+
+      const seriesItem = series.find(s => s.id === event.seriesId) ?? {
+        name: "Formula 1"
+      };
+
       return {
         ...session,
-        eventName: event?.name,
-        seriesName: seriesItem?.name,
+        eventName: event.name,
+        seriesName: seriesItem.name
       };
     })
     .sort(
-      (a, b) => new Date(a.startTime).getTime() - new Date(b.startTime).getTime()
+      (a, b) =>
+        new Date(a.startTime).getTime() -
+        new Date(b.startTime).getTime()
     );
 }
